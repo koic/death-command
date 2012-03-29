@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.files = [
     "README",
     "VERSION",
-    "death",
+    "bin/death",
     "death.gemspec"
   ]
   s.homepage = %q{http://github.com/koic/death-command}

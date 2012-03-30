@@ -1,5 +1,13 @@
 #!/usr/bin/env ruby
+require 'open3'
 
 10.times { system('say -v Ralph deeeeeeeeeeeattttth &') }
-system "kill #{ARGV.join(' ')}"
 
+Open3.popen3("kill #{ARGV.join(' ')}") do |stdin, stdout, stderr|
+  msg = stderr.read
+  if msg =~ /kill: illegal process id: kill/
+    puts 'death: illegal process id: kill'
+  else
+    puts "#{msg.gsub(/kill/, 'death')}"
+  end
+end

@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{death}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["koic"]
-  s.date = %q{2012-03-29}
+  s.date = %q{2012-03-30}
   s.description = %q{kill command wrapper. say "DEATH" with death voice. Operating environment is MacOS X only.}
   s.email = %q{koic.ito@gmail.com}
   s.extra_rdoc_files = [

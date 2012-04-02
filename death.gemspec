@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "README.rdoc",
-    "VERSION",
+    "lib/death/version.rb",
     "bin/death",
     "death.gemspec",
     "LICENSE"

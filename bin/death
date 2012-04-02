@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'open3'
 
-raise 'death command is supporting only MacOS X.' unless RUBY_PLATFORM =~ /darwin/
+raise 'death command is supporting only Mac OS X.' unless RUBY_PLATFORM =~ /darwin/
 
 10.times { system('say -v Ralph deeeeeeeeeeeattttth &') }
 

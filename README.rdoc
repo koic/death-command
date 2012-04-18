@@ -13,6 +13,10 @@ kill command wrapper. say "DEATH" with death voice.
  death -signal_name pid ...
  death -signal_number pid ...
 
+=== shortcut command
+
+ lml
+
 == Operating environment
 
 Mac OS X (only)

@@ -1,7 +1,16 @@
 #!/usr/bin/env ruby
 require 'open3'
 
-raise 'death command is supporting only Mac OS X.' unless RUBY_PLATFORM =~ /darwin/
+def support_os?
+  if RUBY_PLATFORM == 'java'
+    require "java"
+    java.lang.System.getProperty("os.name") == 'Mac OS X'
+  else
+    RUBY_PLATFORM =~ /darwin/
+  end
+end
+
+raise 'death command is supporting only Mac OS X.' unless support_os?
 
 10.times { system('say -v Ralph deeeeeeeeeeeattttth &') }
 

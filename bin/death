@@ -3,8 +3,8 @@ require 'open3'
 
 def support_os?
   if RUBY_PLATFORM == 'java'
-    require "java"
-    java.lang.System.getProperty("os.name") == 'Mac OS X'
+    require 'java'
+    java.lang.System.getProperty('os.name') == 'Mac OS X'
   else
     RUBY_PLATFORM =~ /darwin/
   end

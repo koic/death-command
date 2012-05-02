@@ -9,7 +9,7 @@ module Death::Command
       10.times { system('say -v Ralph deeeeeeeeeeeattttth &') }
 
       Open3.popen3("kill #{[signal, pid, pids].join(' ')}") do |stdin, stdout, stderr|
-      msg = stderr.read
+        msg = stderr.read
         if msg =~ /kill: illegal process id: kill/
           puts 'death: illegal process id: kill'
         else

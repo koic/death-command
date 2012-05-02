@@ -1,24 +1,7 @@
 #!/usr/bin/env ruby
-require 'open3'
 
-def support_os?
-  if RUBY_PLATFORM == 'java'
-    require 'java'
-    java.lang.System.getProperty('os.name') == 'Mac OS X'
-  else
-    RUBY_PLATFORM =~ /darwin/
-  end
-end
+lib_path = File.expand_path('../../lib', __FILE__)
+$:.unshift(lib_path)
 
-raise 'death command is supporting only Mac OS X.' unless support_os?
-
-10.times { system('say -v Ralph deeeeeeeeeeeattttth &') }
-
-Open3.popen3("kill #{ARGV.join(' ')}") do |stdin, stdout, stderr|
-  msg = stderr.read
-  if msg =~ /kill: illegal process id: kill/
-    puts 'death: illegal process id: kill'
-  else
-    puts "#{msg.gsub(/kill/, 'death')}"
-  end
-end
+require 'death'
+Death::Command.death(ARGV.shift, ARGV.shift, ARGV)

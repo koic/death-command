@@ -4,4 +4,4 @@ lib_path = File.expand_path('../../lib', __FILE__)
 $:.unshift(lib_path)
 
 require 'death'
-Death::Command.death(ARGV.shift, ARGV.shift, ARGV)
+Process.death(ARGV.shift, ARGV.shift, ARGV)

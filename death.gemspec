@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
     'README.rdoc'
   ]
   s.files = [
-    'README.rdoc',
+    'README.md',
     'lib/death.rb',
     'lib/death/command.rb',
     'lib/death/core_ext/process.rb',

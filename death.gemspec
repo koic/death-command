@@ -12,9 +12,6 @@ Gem::Specification.new do |s|
   s.date = '2012-05-16'
   s.description = 'kill command wrapper. say "DEATH" with death voice. Operating environment is Mac OS X only.'
   s.email = 'koic.ito@gmail.com'
-  s.extra_rdoc_files = [
-    'README.rdoc'
-  ]
   s.files = [
     'README.md',
     'lib/death.rb',

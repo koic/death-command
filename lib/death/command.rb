@@ -3,7 +3,7 @@ require 'open3'
 module Death::Command
   class << self
     def death(signal, pid, *pids)
-      raise 'death command is supporting only Mac OS X.' unless support_os?
+      raise 'death command is supporting only Mac OS X.' unless supported_os?
 
       10.times { system('say -v Ralph deeeeeeeeeeeattttth &') }
 
@@ -21,7 +21,7 @@ module Death::Command
 
     private
 
-    def support_os?
+    def supported_os?
       if RUBY_PLATFORM == 'java'
         require 'java'
         java.lang.System.getProperty('os.name') == 'Mac OS X'

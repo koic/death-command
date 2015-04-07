@@ -9,4 +9,3 @@ module Process
 
   module_function :death, :lml
 end
-

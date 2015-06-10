@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
     'death.gemspec',
     'LICENSE'
   ]
+  s.add_dependency('facter')
   s.homepage = 'http://github.com/koic/death-command'
   s.require_paths = ['lib']
   s.summary = 'kill command wrapper. say "DEATH" with death voice.'

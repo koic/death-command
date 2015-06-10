@@ -1,5 +1,6 @@
 require 'facter'
 require 'open3'
+require 'shellwords'
 
 module Death::Command
   class << self
@@ -8,7 +9,7 @@ module Death::Command
 
       sound_pressure { system('say -v Ralph deeeeeeeeeeeattttth &') }
 
-      Open3.popen3("kill #{[signal, pid, pids].join(' ')}") do |stdin, stdout, stderr|
+      Open3.popen3("kill #{[signal, pid, pids].flatten.shelljoin}") do |stdin, stdout, stderr|
         msg = stderr.read
         if /kill: illegal process id: kill/ === msg
           puts 'death: illegal process id: kill'

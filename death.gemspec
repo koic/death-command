@@ -9,7 +9,6 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
 
   s.authors = ['ITO Koichi']
-  s.date = '2012-05-16'
   s.description = 'kill command wrapper. say "DEATH" with death voice. Operating environment is Mac OS X only.'
   s.email = 'koic.ito@gmail.com'
   s.files = Dir[

@@ -9,7 +9,7 @@ module Death::Command
 
       Open3.popen3("kill #{[signal, pid, pids].join(' ')}") do |stdin, stdout, stderr|
         msg = stderr.read
-        if msg =~ /kill: illegal process id: kill/
+        if /kill: illegal process id: kill/ === msg
           puts 'death: illegal process id: kill'
         else
           puts "#{msg.gsub(/kill/, 'death')}"
@@ -26,7 +26,7 @@ module Death::Command
         require 'java'
         java.lang.System.getProperty('os.name') == 'Mac OS X'
       else
-        RUBY_PLATFORM =~ /darwin/
+        /darwin/ === RUBY_PLATFORM
       end
     end
   end

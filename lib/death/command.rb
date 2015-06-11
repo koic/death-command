@@ -1,4 +1,3 @@
-require 'facter'
 require 'open3'
 require 'shellwords'
 
@@ -7,7 +6,7 @@ module Death::Command
     def death(signal, pid, *pids)
       raise 'death command is supporting only Mac OS X.' unless supported_os?
 
-      sound_pressure { system('say -v Ralph deeeeeeeeeeeattttth &') }
+      Death::Voice.say('deeeeeeeeeeeattttth')
 
       Open3.popen3("kill #{[signal, pid, pids].flatten.shelljoin}") do |stdin, stdout, stderr|
         msg = stderr.read
@@ -22,12 +21,6 @@ module Death::Command
     alias lml death
 
     private
-
-    def sound_pressure
-      processor_count = Facter[:processorcount].value
-
-      (processor_count * 3).times { yield }
-    end
 
     def supported_os?
       if RUBY_PLATFORM == 'java'

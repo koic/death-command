@@ -4,8 +4,6 @@ require 'shellwords'
 module Death::Command
   class << self
     def death(signal, pid, *pids)
-      raise 'death command is supporting only Mac OS X.' unless supported_os?
-
       Death::Voice.say('deeeeeeeeeeeattttth')
 
       Open3.popen3("kill #{[signal, pid, pids].flatten.shelljoin}") do |stdin, stdout, stderr|
@@ -19,16 +17,5 @@ module Death::Command
     end
 
     alias lml death
-
-    private
-
-    def supported_os?
-      if RUBY_PLATFORM == 'java'
-        require 'java'
-        java.lang.System.getProperty('os.name') == 'Mac OS X'
-      else
-        /darwin/ === RUBY_PLATFORM
-      end
-    end
   end
 end

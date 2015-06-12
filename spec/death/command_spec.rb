@@ -10,6 +10,6 @@ describe Death::Command do
       @pid = fork { EndlessProcess.new.run }
     end
 
-    specify { expect { Death::Command.death(:KILL, @pid) }.not_to raise_error }
+    specify { expect { Death::Command.death('-KILL', @pid) }.not_to raise_error }
   end
 end

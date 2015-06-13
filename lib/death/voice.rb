@@ -1,8 +1,18 @@
 require 'facter'
 require 'shellwords'
 
-module Death::Voice
-  class << self
+module Death
+  class Voice
+    class << self
+      def say(message)
+        new.say(message)
+      end
+    end
+
+    def initialize(ressure_factor = 3)
+      @ressure_factor = ressure_factor.to_i
+    end
+
     def say(message)
       raise 'death command is supporting only Mac OS X.' unless supported_os?
 
@@ -14,7 +24,7 @@ module Death::Voice
     def sound_pressure
       processor_count = Facter[:processorcount].value
 
-      (processor_count * 3).times { yield }
+      (processor_count * @ressure_factor).times { yield }
     end
 
     def supported_os?

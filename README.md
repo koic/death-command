@@ -1,4 +1,4 @@
-# death
+# death [![Gem Version](https://badge.fury.io/rb/death.svg)](http://badge.fury.io/rb/death)
 
 kill command wrapper. say "DEATH" with death voice.
 

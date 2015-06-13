@@ -27,6 +27,24 @@ lml
 
 Mac OS X (only)
 
+## for Developers
+
+### Tuning of death voice
+
+Supply developers with death voice tuner `rake death:tuning`.
+
+move to the death-command source directory.
+
+```
+rake death:tuning # say "DEATH"
+```
+
+adjustable sound pressure using FACTOR=n argument (default 3) .
+
+```
+rake death:tuning FACTOR=5 # the deep timbre of death voice
+```
+
 ## LICENCE
 
 The MIT Licence

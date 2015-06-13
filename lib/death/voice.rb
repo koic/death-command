@@ -10,7 +10,7 @@ module Death
     end
 
     def initialize(ressure_factor = 3)
-      @ressure_factor = ressure_factor.to_i
+      @ressure_factor = ressure_factor
     end
 
     def say(message)

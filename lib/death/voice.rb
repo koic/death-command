@@ -16,7 +16,9 @@ module Death
     def say(message)
       raise 'death command is supporting only Mac OS X.' unless supported_os?
 
-      sound_pressure { spawn("say -v Ralph #{Shellwords.shellescape(message)}") }
+      fork do
+        sound_pressure { spawn("say -v Ralph #{Shellwords.shellescape(message)}") }
+      end
     end
 
     private

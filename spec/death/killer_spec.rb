@@ -1,15 +1,15 @@
-describe Death::Command do
+describe Death::Killer do
   class NeverEndProcess
     def run
       loop {}
     end
   end
 
-  describe '.death' do
+  describe '.kill' do
     before do
       @pid = fork { NeverEndProcess.new.run }
     end
 
-    specify { expect { Death::Command.death('-KILL', @pid) }.not_to raise_error }
+    specify { expect { Death::Killer.kill('-KILL', @pid) }.not_to raise_error }
   end
 end

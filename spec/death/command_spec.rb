@@ -1,11 +1,7 @@
 describe Death::Command do
-  class NeverEndProcess
-    def run
-      loop {}
-    end
-  end
-
   describe '.death' do
+    include_context 'defined never end process class'
+
     before do
       @pid = fork { NeverEndProcess.new.run }
     end

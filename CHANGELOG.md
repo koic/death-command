@@ -1,3 +1,7 @@
+## 0.6.2
+
+* Death voice processes will be asynchronous processing. It separate from kill command.
+
 ## 0.6.1
 
 * Bug fix of error message on omit signum argument.

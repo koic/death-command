@@ -33,7 +33,7 @@ Mac OS X (only)
 
 Supply developers with death voice tuner `rake death:tuning`.
 
-move to the death-command source directory.
+Check out source code and move to the death-command source directory.
 
 ```
 rake death:tuning # say "DEATH"

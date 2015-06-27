@@ -6,6 +6,10 @@ describe Death::Command do
       @pid = fork { NeverEndingProcess.new.run }
     end
 
-    specify { expect { Death::Command.death('-KILL', @pid) }.not_to raise_error }
+    specify {
+      skip unless /darwin/ === RUBY_PLATFORM
+
+      expect { Death::Command.death('-KILL', @pid) }.not_to raise_error
+    }
   end
 end

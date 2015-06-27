@@ -1,4 +1,4 @@
-# death [![Gem Version](https://badge.fury.io/rb/death.svg)](http://badge.fury.io/rb/death)
+# death [![Build Status](https://travis-ci.org/koic/death-command.svg)](https://travis-ci.org/koic/death-command) [![Gem Version](https://badge.fury.io/rb/death.svg)](http://badge.fury.io/rb/death)
 
 kill command wrapper. say "DEATH" with death voice.
 

@@ -45,6 +45,10 @@ adjustable sound pressure using FACTOR=n argument (default 3) .
 rake death:tuning FACTOR=5 # the deep timbre of death voice
 ```
 
+## Presentation Document
+
+* The making of a story (Japanese text) ... http://www.slideshare.net/koic/detroit-programming-city
+
 ## LICENCE
 
 The MIT Licence

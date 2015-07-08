@@ -23,5 +23,5 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/koic/death-command'
   s.require_paths = ['lib']
   s.summary = 'kill command wrapper. say "DEATH" with death voice.'
-  s.executables = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
+  s.executables = `git ls-files -- bin/*`.split("\n").map {|f| File.basename(f) }
 end

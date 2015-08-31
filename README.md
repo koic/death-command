@@ -49,10 +49,6 @@ rake death:tuning FACTOR=5 # the deep timbre of death voice
 
 * The making of a story (Japanese text) ... http://www.slideshare.net/koic/detroit-programming-city
 
-## LICENCE
-
-The MIT Licence
-
 ## Contributing
 
 1. Fork it
@@ -60,3 +56,7 @@ The MIT Licence
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+death is released under the [MIT License](http://www.opensource.org/licenses/MIT).

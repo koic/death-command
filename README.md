@@ -36,13 +36,13 @@ Supply developers with death voice tuner `rake death:tuning`.
 Check out source code and move to the death-command source directory.
 
 ```
-rake death:tuning # say "DEATH"
+$ rake death:tuning # say "DEATH"
 ```
 
 adjustable sound pressure using FACTOR=n argument (default 3) .
 
 ```
-rake death:tuning FACTOR=5 # the deep timbre of death voice
+$ rake death:tuning FACTOR=5 # the deep timbre of death voice
 ```
 
 ## Presentation Document

@@ -9,7 +9,7 @@ GEM
   specs:
     CFPropertyList (2.2.8)
     diff-lcs (1.2.5)
-    facter (2.4.4)
+    facter (2.4.6)
       CFPropertyList (~> 2.2.6)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)

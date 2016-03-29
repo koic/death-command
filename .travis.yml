@@ -1,6 +1,4 @@
 language: ruby
-os:
-  - osx
 before_install:
   - gem install bundler
 gemfile:
